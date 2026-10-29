@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
 import hero from "@/assets/photos/team-plant.jpg.asset.json";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
-import { SiteLayout, meta } from "@/components/site/Layout";
+import { SiteLayout, meta, AbstractLines } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
 import { certs, clients, cycle, industries, mainServices, company } from "@/lib/company";
 
