@@ -19,6 +19,7 @@ function Index() {
       <section className="relative isolate overflow-hidden">
         <img src={hero.url} alt="FISAKA EPC project site" width={1920} height={1440} className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
+        <AbstractLines className="-z-10 text-primary-glow/30" />
         <div className="container-x py-28 text-primary-foreground md:py-40">
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
@@ -81,7 +82,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-gradient-primary py-20 text-primary-foreground">
+      <section className="relative isolate overflow-hidden bg-gradient-primary py-20 text-primary-foreground">
+        <AbstractLines className="-z-10 text-primary-glow/25" />
         <div className="container-x">
           <h2 className="text-3xl font-extrabold">Certified for Quality, Environment & Safety</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-4">
