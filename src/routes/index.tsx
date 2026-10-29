@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
-import hero from "@/assets/photos/hero-refinery.png.asset.json";
+import hero from "@/assets/photos/hero-refinery-clean.png";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import { SiteLayout, meta, AbstractLines } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
@@ -24,7 +24,7 @@ function Index() {
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
           </p>
-          <h1 className="sr-only">{company.tagline}</h1>
+          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)] md:text-6xl">{company.tagline}</h1>
           <p className="mt-6 max-w-xl text-lg font-semibold text-primary-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 font-bold text-primary-foreground transition hover:bg-primary-glow">Our Services <ArrowRight className="h-4 w-4" /></Link>
