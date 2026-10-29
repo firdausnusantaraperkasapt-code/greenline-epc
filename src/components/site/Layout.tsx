@@ -73,9 +73,28 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   );
 }
 
+export function AbstractLines({ className = "" }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" className={`pointer-events-none absolute inset-0 h-full w-full ${className}`}>
+      <g fill="none" stroke="currentColor" strokeWidth="1.2">
+        <path d="M-80 420 C 180 300, 320 160, 880 60" opacity="0.5" />
+        <path d="M-80 460 C 220 340, 380 190, 880 110" opacity="0.35" />
+        <path d="M-80 500 C 260 380, 440 220, 880 160" opacity="0.22" />
+        <path d="M-80 540 C 300 420, 500 250, 880 210" opacity="0.12" />
+        <circle cx="660" cy="90" r="130" opacity="0.25" />
+        <circle cx="660" cy="90" r="90" opacity="0.35" />
+        <circle cx="660" cy="90" r="50" opacity="0.5" />
+        <path d="M520 400 L 800 120" opacity="0.3" />
+        <path d="M600 400 L 860 140" opacity="0.18" />
+      </g>
+    </svg>
+  );
+}
+
 export function PageHero({ eyebrow, title, desc }: { eyebrow: string; title: string; desc: string }) {
   return (
-    <section className="bg-gradient-primary text-primary-foreground">
+    <section className="relative isolate overflow-hidden bg-gradient-primary text-primary-foreground">
+      <AbstractLines className="-z-10 text-primary-glow/40" />
       <div className="container-x py-20">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">{eyebrow}</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-extrabold md:text-5xl">{title}</h1>
