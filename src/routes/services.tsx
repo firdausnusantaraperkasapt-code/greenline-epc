@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CheckCircle2 } from "lucide-react";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import pipeMaintenance from "@/assets/photos/pipe-maintenance.jpg.asset.json";
 import tankErection from "@/assets/photos/tank-erection.jpg.asset.json";
 import gasSkid from "@/assets/photos/gas-skid.jpg.asset.json";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
-import { disciplines, mainServices, specialties } from "@/lib/company";
+import { CycleGear, DisciplineGear, IndustryFlow } from "@/components/site/CoreGears";
+import { mainServices, specialties } from "@/lib/company";
 
 export const Route = createFileRoute("/services")({
   head: () => meta("EPC Services — FISAKA", "Engineering, procurement, construction, tank & vessel maintenance, pipeline maintenance, tank erection and insulation services."),
@@ -26,12 +26,16 @@ function Services() {
           </div>
         ))}
       </section>
-      <section className="bg-muted py-16">
+      <section className="relative isolate overflow-hidden bg-gradient-primary py-20 text-primary-foreground">
         <div className="container-x">
-          <p className="eyebrow">Scope of Disciplines</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {disciplines.map((d) => <span key={d} className="flex items-center gap-2 rounded-full bg-card px-5 py-2.5 font-semibold text-primary-deep"><CheckCircle2 className="h-4 w-4 text-primary" />{d}</span>)}
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">Our Cores</p>
+          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Comprehensive integration system</h2>
+          <p className="mt-4 max-w-2xl text-primary-foreground/80">To ensure the solutions our company provides, FISAKA carries out implementations as follows — a full project cycle across all engineering disciplines and industries.</p>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-10 md:justify-start md:gap-16">
+            <CycleGear />
+            <DisciplineGear />
           </div>
+          <IndustryFlow />
         </div>
       </section>
       <section className="container-x py-20">
