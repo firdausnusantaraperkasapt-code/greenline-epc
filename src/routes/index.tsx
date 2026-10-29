@@ -72,7 +72,7 @@ function Index() {
         <p className="eyebrow">Industries We Serve</p>
         <h2 className="mt-3 text-3xl font-extrabold text-primary-deep md:text-4xl">Comprehensive integration system</h2>
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-6">
-          {industries.map((ind, i) => { const I = icons[i]; return (
+          {industries.map((ind, i) => { const I = icons[i] ?? Factory; return (
             <div key={ind} className="flex flex-col items-center rounded-xl border p-6 text-center transition hover:bg-primary hover:text-primary-foreground">
               <I className="h-9 w-9" /><p className="mt-3 text-sm font-bold">{ind}</p>
             </div>
