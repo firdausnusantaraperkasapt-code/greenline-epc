@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
+import { ClientMark } from "@/components/site/ClientMark";
 import { clients, experience } from "@/lib/company";
 
 export const Route = createFileRoute("/projects")({
@@ -26,7 +27,7 @@ function Projects() {
         <div className="container-x">
           <p className="eyebrow">Partnerships & Clients</p>
           <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-6">
-            {clients.map((c) => <div key={c} className="flex h-20 items-center justify-center rounded-lg bg-card px-3 text-center text-sm font-bold text-primary-deep">{c}</div>)}
+            {clients.map((c) => <ClientMark key={c.name} client={c} />)}
           </div>
         </div>
       </section>

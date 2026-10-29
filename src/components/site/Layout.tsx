@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
 import { company } from "@/lib/company";
+import logoAsset from "@/assets/logo-fisaka.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,9 +14,8 @@ const nav = [
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <span className="flex items-center gap-2">
-      <span className="grid h-9 w-9 place-items-center rounded-md bg-gradient-primary font-display text-lg font-extrabold text-primary-foreground">F</span>
-      <span className={`font-display text-xl font-extrabold tracking-wide ${light ? "text-primary-foreground" : "text-primary-deep"}`}>FISAKA</span>
+    <span className={`flex items-center rounded-md px-2 py-1 ${light ? "bg-card" : ""}`}>
+      <img src={logoAsset.url} alt="Logo FISAKA — PT Firdaus Nusantara Perkasa" className="h-9 w-auto" />
     </span>
   );
 }

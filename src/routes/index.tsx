@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel
 import hero from "@/assets/hero.jpg";
 import pipeline from "@/assets/pipeline.jpg";
 import { SiteLayout, meta } from "@/components/site/Layout";
+import { ClientMark } from "@/components/site/ClientMark";
 import { certs, clients, cycle, industries, mainServices, company } from "@/lib/company";
 
 export const Route = createFileRoute("/")({
@@ -100,7 +101,7 @@ function Index() {
         <p className="eyebrow">Partnerships & Clients</p>
         <h2 className="mt-3 text-3xl font-extrabold text-primary-deep md:text-4xl">Trusted by Indonesia's leading companies</h2>
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-6">
-          {clients.map((c) => <div key={c} className="flex h-20 items-center justify-center rounded-lg border bg-muted px-3 text-sm font-bold text-primary-deep">{c}</div>)}
+          {clients.map((c) => <ClientMark key={c.name} client={c} />)}
         </div>
         <Link to="/contact" className="mt-14 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 font-bold text-primary-foreground hover:bg-primary-deep">Start your project with FISAKA <ArrowRight className="h-4 w-4" /></Link>
       </section>
