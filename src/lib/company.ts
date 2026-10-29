@@ -57,4 +57,23 @@ export const experience = [
   { year: "2020", items: ["Installation & Erection subcont — PT Pertamina EP Bunyu Field", "Installation Vessel Chemical & Pipe Installation — PT PJB Tj. Awar-Awar, Tuban", "Tank Cleaning — PT Trans Pacific Petrochemical Indotama, Tuban"] },
 ];
 
-export const clients = ["Pertamina", "PLN Nusantara Power", "Chiyoda Corporation", "Freeport-McMoRan", "MedcoEnergi", "Elnusa", "Wilmar", "TPPI", "Nindya Karya", "IKPT", "Sokoria Geothermal", "Semen Indonesia Logistik", "Hikari Teknologi Indonesia", "Arsynergy Resources", "POMI", "JIPE", "Swadaya Cipta", "EcoOils"];
+export const clients = [
+  { name: "Pertamina", short: "P", color: "#005CAB" },
+  { name: "PLN Nusantara Power", short: "NP", color: "#0072BC" },
+  { name: "Chiyoda Corporation", short: "C", color: "#E60012" },
+  { name: "Freeport-McMoRan", short: "FM", color: "#8A6D3B" },
+  { name: "MedcoEnergi", short: "M", color: "#F7941E" },
+  { name: "Elnusa", short: "E", color: "#00A651" },
+  { name: "Wilmar", short: "W", color: "#C8102E" },
+  { name: "TPPI", short: "T", color: "#005BAC" },
+  { name: "Nindya Karya", short: "NK", color: "#1B75BB" },
+  { name: "IKPT", short: "I", color: "#ED1C24" },
+  { name: "Sokoria Geothermal", short: "SG", color: "#00A19A" },
+  { name: "Semen Indonesia Logistik", short: "SIL", color: "#005DAA" },
+  { name: "Hikari Teknologi Indonesia", short: "HT", color: "#F39200" },
+  { name: "Arsynergy Resources", short: "AR", color: "#7A3E9D" },
+  { name: "POMI", short: "P", color: "#00427A" },
+  { name: "JIPE", short: "J", color: "#E31E24" },
+  { name: "Swadaya Cipta", short: "SC", color: "#2E7D32" },
+  { name: "EcoOils", short: "EO", color: "#66BB6A" },
+];
