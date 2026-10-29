@@ -25,7 +25,7 @@ function Index() {
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
           </p>
           <h1 className="sr-only">{company.tagline}</h1>
-          <p className="mt-6 max-w-xl text-lg text-primary-foreground/90 drop-shadow">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
+          <p className="mt-6 max-w-xl text-lg font-semibold text-primary-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 font-bold text-primary-foreground transition hover:bg-primary-glow">Our Services <ArrowRight className="h-4 w-4" /></Link>
             <Link to="/contact" className="rounded-md border border-primary-foreground/60 px-6 py-3.5 font-bold transition hover:bg-primary-foreground hover:text-primary-deep">Contact Us</Link>
