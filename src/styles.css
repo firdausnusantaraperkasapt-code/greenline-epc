@@ -57,7 +57,7 @@
   --border: oklch(0.91 0.02 150);
   --input: oklch(0.91 0.02 150);
   --ring: oklch(0.52 0.15 150);
-  --gradient-hero: linear-gradient(100deg, oklch(0.24 0.07 155 / 0.95) 0%, oklch(0.32 0.1 152 / 0.8) 45%, oklch(0.4 0.12 150 / 0.2) 100%);
+  --gradient-hero: linear-gradient(100deg, oklch(0.24 0.07 155 / 0.72) 0%, oklch(0.32 0.1 152 / 0.45) 45%, oklch(0.4 0.12 150 / 0.08) 100%);
   --gradient-primary: linear-gradient(135deg, var(--primary-deep), var(--primary));
   --shadow-elegant: 0 20px 40px -18px color-mix(in oklab, var(--primary-deep) 40%, transparent);
 }
