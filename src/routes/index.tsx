@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import pipeline from "@/assets/pipeline.jpg";
+import hero from "@/assets/photos/team-plant.jpg.asset.json";
+import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import { SiteLayout, meta } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
 import { certs, clients, cycle, industries, mainServices, company } from "@/lib/company";
@@ -17,7 +17,7 @@ function Index() {
   return (
     <SiteLayout>
       <section className="relative isolate overflow-hidden">
-        <img src={hero} alt="FISAKA EPC project site" width={1920} height={1088} className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img src={hero.url} alt="FISAKA EPC project site" width={1920} height={1440} className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
         <div className="container-x py-28 text-primary-foreground md:py-40">
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
@@ -41,7 +41,7 @@ function Index() {
       </section>
 
       <section className="container-x grid items-center gap-12 py-24 md:grid-cols-2">
-        <img src={pipeline} alt="FISAKA engineers inspecting pipeline" loading="lazy" width={1280} height={960} className="rounded-xl shadow-elegant" />
+        <img src={tankFarm.url} alt="FISAKA team at a storage tank farm" loading="lazy" width={1920} height={1440} className="rounded-xl shadow-elegant" />
         <div>
           <p className="eyebrow">About FISAKA</p>
           <h2 className="mt-3 text-3xl font-extrabold text-primary-deep md:text-4xl">A reliable and progressive EPC partner</h2>

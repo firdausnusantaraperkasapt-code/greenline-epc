@@ -44,10 +44,10 @@ export const mainServices = [
 ];
 
 export const specialties = [
-  { t: "Tank & Vessel Maintenance", d: "Routine inspection, repair and cleaning to API standards, extending asset lifespan safely.", img: "tank" },
+  { t: "Tank & Vessel Maintenance", d: "Routine inspection, repair and cleaning to API standards, extending asset lifespan safely.", img: "tankMaint" },
   { t: "Pipeline Maintenance", d: "Skilled technicians and fast replacement of piping components to minimize disruption.", img: "pipeline" },
-  { t: "Tank Erection", d: "Fabrication and erection of storage tanks for oil, gas and process industries.", img: "tank" },
-  { t: "Thermal & Pipe Insulation", d: "Lower energy costs and protect assets, following IEC and ASTM standards.", img: "pipeline" },
+  { t: "Tank Erection", d: "Fabrication and erection of storage tanks for oil, gas and process industries.", img: "tankErect" },
+  { t: "Thermal & Pipe Insulation", d: "Lower energy costs and protect assets, following IEC and ASTM standards.", img: "insulation" },
 ];
 
 export const experience = [

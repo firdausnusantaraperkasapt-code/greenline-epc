@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Quote } from "lucide-react";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
 import { culture, milestones } from "@/lib/company";
+import teamBriefing from "@/assets/photos/team-briefing.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => meta("About FISAKA — Vision, Mission & Milestones", "The journey of PT Firdaus Nusantara Perkasa (FISAKA) since 2013, our vision, mission and CHIEF culture."),
@@ -12,6 +13,9 @@ function About() {
   return (
     <SiteLayout>
       <PageHero eyebrow="Our Company" title="Since 2013, redefining ourselves to deliver value" desc="PT Firdaus Nusantara Perkasa — well known as FISAKA — is managed by expert professionals and supported by advanced engineering practices and equipment." />
+      <section className="container-x pt-16">
+        <img src={teamBriefing.url} alt="FISAKA team safety briefing at a plant site" width={1600} height={1200} className="h-72 w-full rounded-xl object-cover shadow-elegant md:h-96" />
+      </section>
       <section className="container-x grid gap-8 py-20 md:grid-cols-2">
         <div className="rounded-xl bg-gradient-primary p-10 text-primary-foreground">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">Vision</p>

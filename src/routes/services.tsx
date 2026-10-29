@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
-import tank from "@/assets/tank.jpg";
-import pipeline from "@/assets/pipeline.jpg";
+import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
+import pipeMaintenance from "@/assets/photos/pipe-maintenance.jpg.asset.json";
+import tankErection from "@/assets/photos/tank-erection.jpg.asset.json";
+import gasSkid from "@/assets/photos/gas-skid.jpg.asset.json";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
 import { disciplines, mainServices, specialties } from "@/lib/company";
 
@@ -10,7 +12,7 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
-const imgs: Record<string, string> = { tank, pipeline };
+const imgs: Record<string, string> = { tankMaint: tankFarm.url, pipeline: pipeMaintenance.url, tankErect: tankErection.url, insulation: gasSkid.url };
 
 function Services() {
   return (
