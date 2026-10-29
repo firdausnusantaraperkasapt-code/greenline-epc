@@ -24,7 +24,7 @@ function Index() {
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
           </p>
-          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight drop-shadow-lg md:text-6xl">{company.tagline}</h1>
+          <h1 className="sr-only">{company.tagline}</h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/90 drop-shadow">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 font-bold text-primary-foreground transition hover:bg-primary-glow">Our Services <ArrowRight className="h-4 w-4" /></Link>
