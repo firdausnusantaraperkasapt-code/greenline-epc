@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
-import hero from "@/assets/photos/hero-refinery-clean.png";
+import hero from "@/assets/photos/hero-refinery-clean.png.asset.json";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import { SiteLayout, meta, AbstractLines } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
