@@ -1,14 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
+import { Menu, X, Mail, Phone, MapPin, Download } from "lucide-react";
 import { company } from "@/lib/company";
 import logoAsset from "@/assets/logo-fisaka.png.asset.json";
+import profileAsset from "@/assets/documents/company-profile.pdf.asset.json";
+import { Button } from "@/components/ui/button";
 
 const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
+  { to: "/certificate", label: "Certificate" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -33,7 +36,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
         <div className="container-x flex h-16 items-center justify-between">
           <Link to="/"><Logo /></Link>
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-5 md:flex">
             {nav.map((n) => (
               <Link key={n.to} to={n.to} activeOptions={{ exact: true }} className="text-sm font-semibold text-muted-foreground transition-colors hover:text-primary" activeProps={{ className: "text-primary" }}>
                 {n.label}
@@ -65,6 +68,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="flex flex-col gap-2 text-sm">
             {nav.map((n) => <Link key={n.to} to={n.to} className="text-primary-foreground/80 hover:text-primary-glow">{n.label}</Link>)}
+            <Button asChild variant="link" className="h-auto justify-start whitespace-normal p-0 text-primary-foreground/80 hover:text-primary-glow">
+              <a href={profileAsset.url} download="FISAKA-Company-Profile.pdf"><Download />Download Company Profile</a>
+            </Button>
           </div>
         </div>
         <div className="border-t border-primary-foreground/10 py-5 text-center text-xs text-primary-foreground/60">© {new Date().getFullYear()} {company.legal}. All rights reserved.</div>
