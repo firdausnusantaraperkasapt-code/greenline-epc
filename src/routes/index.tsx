@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
-import hero from "@/assets/photos/team-plant.jpg.asset.json";
+import hero from "@/assets/photos/hero-refinery.png.asset.json";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import { SiteLayout, meta, AbstractLines } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
@@ -17,15 +17,15 @@ function Index() {
   return (
     <SiteLayout>
       <section className="relative isolate overflow-hidden">
-        <img src={hero.url} alt="FISAKA EPC project site" width={1920} height={1440} className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img src={hero.url} alt="FISAKA EPC project site — storage tank and refinery" width={1920} height={1152} className="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
         <AbstractLines className="-z-10 text-primary-glow/30" />
-        <div className="container-x py-28 text-primary-foreground md:py-40">
+        <div className="container-x py-28 text-primary-foreground md:py-44">
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
           </p>
-          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight md:text-6xl">{company.tagline}</h1>
-          <p className="mt-6 max-w-xl text-lg text-primary-foreground/85">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
+          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight drop-shadow-lg md:text-6xl">{company.tagline}</h1>
+          <p className="mt-6 max-w-xl text-lg text-primary-foreground/90 drop-shadow">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 font-bold text-primary-foreground transition hover:bg-primary-glow">Our Services <ArrowRight className="h-4 w-4" /></Link>
             <Link to="/contact" className="rounded-md border border-primary-foreground/60 px-6 py-3.5 font-bold transition hover:bg-primary-foreground hover:text-primary-deep">Contact Us</Link>
