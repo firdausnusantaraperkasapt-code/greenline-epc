@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FISAKA — PT Firdaus Nusantara Perkasa" },
-      { name: "description", content: "EPC company for oil & gas, petrochemical, power plant and renewable energy." },
+      { property: "og:site_name", content: "FISAKA — PT Firdaus Nusantara Perkasa" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
