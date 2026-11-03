@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Factory, Flame, Zap, Mountain, Building2, Fuel } from "lucide-react";
 import hero from "@/assets/photos/hero-refinery-clean.png.asset.json";
+import share from "@/assets/social/home.jpg.asset.json";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import { SiteLayout, meta, AbstractLines } from "@/components/site/Layout";
 import { ClientMark } from "@/components/site/ClientMark";
@@ -8,7 +9,7 @@ import { certs, clients, cycle, industries, mainServices, company } from "@/lib/
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
-  head: () => meta("FISAKA — EPC Company | PT Firdaus Nusantara Perkasa", "Integrated Engineering, Procurement & Construction services for oil & gas, petrochemical, power plant and renewable energy in Indonesia."),
+  head: () => meta("FISAKA — EPC Company | PT Firdaus Nusantara Perkasa", "FISAKA delivers integrated engineering, procurement and construction for Indonesia’s energy and industrial sectors, with mechanical and maintenance expertise.", "/", share.url),
   component: Index,
 });
 

@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import iso from "@/assets/certificates/iso.png.asset.json";
 import smk3 from "@/assets/certificates/smk3.png.asset.json";
 import profile from "@/assets/documents/company-profile.pdf.asset.json";
+import share from "@/assets/social/certificate.jpg.asset.json";
 
 export const Route = createFileRoute("/certificate")({
   staticData: { sitemap: true },
-  head: () => meta("Certificate & Company Profile — FISAKA", "View the ISO 9001, ISO 14001, ISO 45001 and SMK3 certificates of PT Firdaus Nusantara Perkasa and download the FISAKA company profile."),
+  head: () => meta("Certificate & Company Profile — FISAKA", "View the ISO 9001, ISO 14001, ISO 45001 and SMK3 certificates of PT Firdaus Nusantara Perkasa and download the FISAKA company profile.", "/certificate", share.url),
   component: Certificate,
 });
 

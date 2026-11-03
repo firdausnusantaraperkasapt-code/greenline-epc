@@ -3,10 +3,11 @@ import { Mail, MapPin, Phone, Warehouse } from "lucide-react";
 import { useState } from "react";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
 import { company } from "@/lib/company";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head: () => meta("Contact FISAKA — Gresik, East Java", "Contact PT Firdaus Nusantara Perkasa for EPC, maintenance and construction projects."),
+  head: () => meta("Contact FISAKA — Gresik, East Java", "Contact PT Firdaus Nusantara Perkasa for EPC, maintenance and construction projects.", "/contact"),
   component: Contact,
 });
 
@@ -39,10 +40,19 @@ function Contact() {
           className="space-y-4 rounded-xl bg-secondary p-8"
         >
           <h2 className="text-2xl font-extrabold text-primary-deep">Send us a message</h2>
-          <input name="name" required placeholder="Full name" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
-          <input name="company" placeholder="Company" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
-          <textarea name="message" required rows={5} placeholder="Tell us about your project" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
-          <button className="w-full rounded-md bg-primary py-3.5 font-bold text-primary-foreground hover:bg-primary-deep">Send Message</button>
+          <div className="space-y-2">
+            <label htmlFor="contact-name" className="block text-sm font-semibold">Full name</label>
+            <input id="contact-name" name="name" autoComplete="name" required placeholder="Full name" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="contact-company" className="block text-sm font-semibold">Company</label>
+            <input id="contact-company" name="company" autoComplete="organization" placeholder="Company" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="contact-message" className="block text-sm font-semibold">Tell us about your project</label>
+            <textarea id="contact-message" name="message" required rows={5} placeholder="Tell us about your project" className="w-full rounded-md border bg-background px-4 py-3 outline-none focus:border-primary" />
+          </div>
+          <Button type="submit" className="h-auto w-full py-3.5 font-bold">Send Message</Button>
           {sent && <p className="text-sm text-primary">Your email app has been opened to send the message.</p>}
         </form>
       </section>

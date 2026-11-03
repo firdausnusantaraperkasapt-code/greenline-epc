@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CertificateRouteImport } from './routes/certificate'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EpcContractorIndonesiaRouteImport } from './routes/epc-contractor-indonesia'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -37,6 +38,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EpcContractorIndonesiaRoute = EpcContractorIndonesiaRouteImport.update({
+  id: '/epc-contractor-indonesia',
+  path: '/epc-contractor-indonesia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
+  '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
+  '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
+  '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificate'
     | '/contact'
+    | '/epc-contractor-indonesia'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificate'
     | '/contact'
+    | '/epc-contractor-indonesia'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificate'
     | '/contact'
+    | '/epc-contractor-indonesia'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CertificateRoute: typeof CertificateRoute
   ContactRoute: typeof ContactRoute
+  EpcContractorIndonesiaRoute: typeof EpcContractorIndonesiaRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/epc-contractor-indonesia': {
+      id: '/epc-contractor-indonesia'
+      path: '/epc-contractor-indonesia'
+      fullPath: '/epc-contractor-indonesia'
+      preLoaderRoute: typeof EpcContractorIndonesiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CertificateRoute: CertificateRoute,
   ContactRoute: ContactRoute,
+  EpcContractorIndonesiaRoute: EpcContractorIndonesiaRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

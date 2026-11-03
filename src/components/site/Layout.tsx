@@ -68,6 +68,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="flex flex-col gap-2 text-sm">
             {nav.map((n) => <Link key={n.to} to={n.to} className="text-primary-foreground/80 hover:text-primary-glow">{n.label}</Link>)}
+            <Link to="/epc-contractor-indonesia" className="text-primary-foreground/80 hover:text-primary-glow">EPC Contractor Indonesia</Link>
             <Button asChild variant="link" className="h-auto justify-start whitespace-normal p-0 text-primary-foreground/80 hover:text-primary-glow">
               <a href={profileAsset.url} download="FISAKA-Company-Profile.pdf"><Download />Download Company Profile</a>
             </Button>
@@ -110,7 +111,8 @@ export function PageHero({ eyebrow, title, desc }: { eyebrow: string; title: str
   );
 }
 
-export function meta(title: string, description: string) {
+export function meta(title: string, description: string, path: string, image?: string) {
+  const url = new URL(path, "https://fisaka.com").href;
   return {
     meta: [
       { title },
@@ -118,7 +120,15 @@ export function meta(title: string, description: string) {
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
+      ...(image ? [
+        { property: "og:image", content: new URL(image, "https://fisaka.com").href },
+        { name: "twitter:image", content: new URL(image, "https://fisaka.com").href },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+      ] : []),
     ],
+    links: [{ rel: "canonical", href: url }],
   };
 }
