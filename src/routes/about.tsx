@@ -3,10 +3,11 @@ import { Quote } from "lucide-react";
 import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
 import { culture, milestones } from "@/lib/company";
 import teamBriefing from "@/assets/photos/team-briefing.jpg.asset.json";
+import share from "@/assets/social/about.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   staticData: { sitemap: true },
-  head: () => meta("About FISAKA — Vision, Mission & Milestones", "The journey of PT Firdaus Nusantara Perkasa (FISAKA) since 2013, our vision, mission and CHIEF culture."),
+  head: () => meta("About FISAKA — Vision, Mission & Milestones", "The journey of PT Firdaus Nusantara Perkasa (FISAKA) since 2013, our vision, mission and CHIEF culture.", "/about", share.url),
   component: About,
 });
 

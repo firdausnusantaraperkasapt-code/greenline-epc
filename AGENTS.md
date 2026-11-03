@@ -11,3 +11,5 @@
 
 - Certificate content lives in the dedicated `/certificate` file route and uses the shared site layout, preserving consistent navigation and page headings.
 - Uploaded certificates and the company profile are served through Lovable asset pointers; PDF download links use the same-origin asset URL with a download filename so visitors receive the original document.
+- Every public content route uses the shared metadata helper with its own path for self-referencing canonical and Open Graph URLs; share images are resized copies of photos displayed on that page, and image-free pages omit image tags.
+- The EPC contractor Indonesia page uses shared company service and experience data and opts into the router-driven sitemap, keeping search-focused content aligned with the company profile.

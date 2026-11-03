@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head: () => meta("Contact FISAKA — Gresik, East Java", "Contact PT Firdaus Nusantara Perkasa for EPC, maintenance and construction projects."),
+  head: () => meta("Contact FISAKA — Gresik, East Java", "Contact PT Firdaus Nusantara Perkasa for EPC, maintenance and construction projects.", "/contact"),
   component: Contact,
 });
 

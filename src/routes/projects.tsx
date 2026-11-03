@@ -9,6 +9,7 @@ import craneLift from "@/assets/photos/crane-lift.jpg.asset.json";
 import teamBriefing from "@/assets/photos/team-briefing.jpg.asset.json";
 import structureGresik from "@/assets/photos/structure-gresik.jpg.asset.json";
 import gasSkid from "@/assets/photos/gas-skid.jpg.asset.json";
+import share from "@/assets/social/projects.jpg.asset.json";
 
 const gallery = [
   { src: steelErection.url, alt: "Steel structure erection with boom lifts" },
@@ -21,7 +22,7 @@ const gallery = [
 
 export const Route = createFileRoute("/projects")({
   staticData: { sitemap: true },
-  head: () => meta("Project Experience — FISAKA", "FISAKA's project track record with Pertamina, Elnusa, WIKA, Chiyoda, PJB, Wilmar and more."),
+  head: () => meta("Project Experience — FISAKA", "FISAKA's project track record with Pertamina, Elnusa, WIKA, Chiyoda, PJB, Wilmar and more.", "/projects", share.url),
   component: Projects,
 });
 

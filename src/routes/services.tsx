@@ -1,4 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import share from "@/assets/social/services.jpg.asset.json";
+import { Button } from "@/components/ui/button";
 import tankFarm from "@/assets/photos/tank-farm.jpg.asset.json";
 import pipeMaintenance from "@/assets/photos/pipe-maintenance.jpg.asset.json";
 import tankErection from "@/assets/photos/tank-erection.jpg.asset.json";
@@ -9,7 +11,7 @@ import { mainServices, specialties } from "@/lib/company";
 
 export const Route = createFileRoute("/services")({
   staticData: { sitemap: true },
-  head: () => meta("EPC Services — FISAKA", "Engineering, procurement, construction, tank & vessel maintenance, pipeline maintenance, tank erection and insulation services."),
+  head: () => meta("EPC Services — FISAKA", "Engineering, procurement, construction, tank & vessel maintenance, pipeline maintenance, tank erection and insulation services.", "/services", share.url),
   component: Services,
 });
 
@@ -30,6 +32,9 @@ function Services() {
           </div>
         ))}
         </div>
+        <Button asChild variant="link" className="mt-6 h-auto whitespace-normal p-0">
+          <Link to="/epc-contractor-indonesia">EPC contractor services in Indonesia →</Link>
+        </Button>
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-primary py-20 text-primary-foreground">
         <div className="container-x">
