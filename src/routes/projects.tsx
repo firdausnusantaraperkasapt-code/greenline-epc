@@ -20,6 +20,7 @@ const gallery = [
 ];
 
 export const Route = createFileRoute("/projects")({
+  staticData: { sitemap: true },
   head: () => meta("Project Experience — FISAKA", "FISAKA's project track record with Pertamina, Elnusa, WIKA, Chiyoda, PJB, Wilmar and more."),
   component: Projects,
 });

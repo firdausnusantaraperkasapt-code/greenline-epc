@@ -5,6 +5,7 @@ import { SiteLayout, PageHero, meta } from "@/components/site/Layout";
 import { company } from "@/lib/company";
 
 export const Route = createFileRoute("/contact")({
+  staticData: { sitemap: true },
   head: () => meta("Contact FISAKA — Gresik, East Java", "Contact PT Firdaus Nusantara Perkasa for EPC, maintenance and construction projects."),
   component: Contact,
 });

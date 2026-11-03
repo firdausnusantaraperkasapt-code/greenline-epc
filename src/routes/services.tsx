@@ -8,6 +8,7 @@ import { CycleGear, DisciplineGear, IndustryFlow } from "@/components/site/CoreG
 import { mainServices, specialties } from "@/lib/company";
 
 export const Route = createFileRoute("/services")({
+  staticData: { sitemap: true },
   head: () => meta("EPC Services — FISAKA", "Engineering, procurement, construction, tank & vessel maintenance, pipeline maintenance, tank erection and insulation services."),
   component: Services,
 });

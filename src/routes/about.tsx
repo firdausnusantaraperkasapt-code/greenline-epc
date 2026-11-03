@@ -5,6 +5,7 @@ import { culture, milestones } from "@/lib/company";
 import teamBriefing from "@/assets/photos/team-briefing.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   head: () => meta("About FISAKA — Vision, Mission & Milestones", "The journey of PT Firdaus Nusantara Perkasa (FISAKA) since 2013, our vision, mission and CHIEF culture."),
   component: About,
 });

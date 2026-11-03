@@ -7,6 +7,7 @@ import smk3 from "@/assets/certificates/smk3.png.asset.json";
 import profile from "@/assets/documents/company-profile.pdf.asset.json";
 
 export const Route = createFileRoute("/certificate")({
+  staticData: { sitemap: true },
   head: () => meta("Certificate & Company Profile — FISAKA", "View the ISO 9001, ISO 14001, ISO 45001 and SMK3 certificates of PT Firdaus Nusantara Perkasa and download the FISAKA company profile."),
   component: Certificate,
 });
