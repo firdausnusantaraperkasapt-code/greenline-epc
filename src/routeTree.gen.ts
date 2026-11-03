@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CertificateRouteImport } from './routes/certificate'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EpcContractorIndonesiaRouteImport } from './routes/epc-contractor-indonesia'
+import { Route as PerusahaanEpcGresikRouteImport } from './routes/perusahaan-epc-gresik'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -43,6 +44,11 @@ const EpcContractorIndonesiaRoute = EpcContractorIndonesiaRouteImport.update({
   path: '/epc-contractor-indonesia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PerusahaanEpcGresikRoute = PerusahaanEpcGresikRouteImport.update({
+  id: '/perusahaan-epc-gresik',
+  path: '/perusahaan-epc-gresik',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
   '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
+  '/perusahaan-epc-gresik': typeof PerusahaanEpcGresikRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
   '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
+  '/perusahaan-epc-gresik': typeof PerusahaanEpcGresikRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/certificate': typeof CertificateRoute
   '/contact': typeof ContactRoute
   '/epc-contractor-indonesia': typeof EpcContractorIndonesiaRoute
+  '/perusahaan-epc-gresik': typeof PerusahaanEpcGresikRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/certificate'
     | '/contact'
     | '/epc-contractor-indonesia'
+    | '/perusahaan-epc-gresik'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/certificate'
     | '/contact'
     | '/epc-contractor-indonesia'
+    | '/perusahaan-epc-gresik'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/certificate'
     | '/contact'
     | '/epc-contractor-indonesia'
+    | '/perusahaan-epc-gresik'
     | '/projects'
     | '/services'
     | '/sitemap.xml'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   CertificateRoute: typeof CertificateRoute
   ContactRoute: typeof ContactRoute
   EpcContractorIndonesiaRoute: typeof EpcContractorIndonesiaRoute
+  PerusahaanEpcGresikRoute: typeof PerusahaanEpcGresikRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EpcContractorIndonesiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/perusahaan-epc-gresik': {
+      id: '/perusahaan-epc-gresik'
+      path: '/perusahaan-epc-gresik'
+      fullPath: '/perusahaan-epc-gresik'
+      preLoaderRoute: typeof PerusahaanEpcGresikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   CertificateRoute: CertificateRoute,
   ContactRoute: ContactRoute,
   EpcContractorIndonesiaRoute: EpcContractorIndonesiaRoute,
+  PerusahaanEpcGresikRoute: PerusahaanEpcGresikRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

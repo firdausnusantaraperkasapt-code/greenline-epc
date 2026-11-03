@@ -69,6 +69,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="flex flex-col gap-2 text-sm">
             {nav.map((n) => <Link key={n.to} to={n.to} className="text-primary-foreground/80 hover:text-primary-glow">{n.label}</Link>)}
             <Link to="/epc-contractor-indonesia" className="text-primary-foreground/80 hover:text-primary-glow">EPC Contractor Indonesia</Link>
+            <Link to="/perusahaan-epc-gresik" className="text-primary-foreground/80 hover:text-primary-glow">Perusahaan EPC Gresik</Link>
             <Button asChild variant="link" className="h-auto justify-start whitespace-normal p-0 text-primary-foreground/80 hover:text-primary-glow">
               <a href={profileAsset.url} download="FISAKA-Company-Profile.pdf"><Download />Download Company Profile</a>
             </Button>
