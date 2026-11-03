@@ -25,8 +25,8 @@ function Index() {
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary-deep/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
             <ShieldCheck className="h-4 w-4" /> EPC Company · Since 2013
           </p>
-          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)] md:text-6xl">{company.tagline}</h1>
-          <p className="mt-6 max-w-xl text-lg font-semibold text-primary-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">Integrated Engineering, Procurement & Construction — from mechanical construction to sustainable renewable energy solutions.</p>
+          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)] md:text-6xl">Integrated EPC Services for Energy and Industry in Indonesia</h1>
+          <p className="mt-6 max-w-xl text-lg font-semibold text-primary-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">{company.tagline} — Integrated Engineering, Procurement & Construction, from mechanical construction to sustainable renewable energy solutions.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 font-bold text-primary-foreground transition hover:bg-primary-glow">Our Services <ArrowRight className="h-4 w-4" /></Link>
             <Link to="/contact" className="rounded-md border border-primary-foreground/60 px-6 py-3.5 font-bold transition hover:bg-primary-foreground hover:text-primary-deep">Contact Us</Link>
@@ -51,7 +51,7 @@ function Index() {
           <div className="mt-8 flex flex-wrap gap-2">
             {cycle.map((c, i) => <span key={c} className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-accent-foreground">{i + 1}. {c}</span>)}
           </div>
-          <Link to="/about" className="mt-8 inline-flex items-center gap-2 font-bold text-primary">Learn more <ArrowRight className="h-4 w-4" /></Link>
+          <Link to="/about" className="mt-8 inline-flex items-center gap-2 font-bold text-primary">Learn about FISAKA <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
 
