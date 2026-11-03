@@ -7,6 +7,7 @@ import { ClientMark } from "@/components/site/ClientMark";
 import { certs, clients, cycle, industries, mainServices, company } from "@/lib/company";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => meta("FISAKA — EPC Company | PT Firdaus Nusantara Perkasa", "Integrated Engineering, Procurement & Construction services for oil & gas, petrochemical, power plant and renewable energy in Indonesia."),
   component: Index,
 });
