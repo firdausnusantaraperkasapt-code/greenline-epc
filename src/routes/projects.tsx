@@ -29,7 +29,10 @@ function Projects() {
   return (
     <SiteLayout>
       <PageHero eyebrow="Our Experience" title="Proven track record across Indonesia" desc="Installation, erection, maintenance and insulation projects for leading energy and industrial companies." />
-      <section className="container-x grid gap-6 py-20 md:grid-cols-2">
+      <section className="container-x py-20">
+        <p className="eyebrow">Track Record</p>
+        <h2 className="mt-3 text-3xl font-extrabold text-primary-deep">Project experience by year</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
         {experience.map((e) => (
           <div key={e.year} className="rounded-xl border bg-card p-8">
             <span className="rounded-md bg-primary px-3 py-1 font-display font-bold text-primary-foreground">{e.year}</span>
@@ -38,6 +41,7 @@ function Projects() {
             </ul>
           </div>
         ))}
+        </div>
       </section>
       <section className="container-x pb-20">
         <p className="eyebrow">On Site</p>

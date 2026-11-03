@@ -19,13 +19,17 @@ function Services() {
   return (
     <SiteLayout>
       <PageHero eyebrow="Our Services" title="Integrated Project Solutions" desc="From pre-design and engineering to procurement, construction, start-up and maintenance." />
-      <section className="container-x grid gap-6 py-20 md:grid-cols-3">
+      <section className="container-x py-20">
+        <p className="eyebrow">What We Do</p>
+        <h2 className="mt-3 text-3xl font-extrabold text-primary-deep">Our Core Services</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
         {mainServices.map((s) => (
           <div key={s.t} className="rounded-xl border-t-4 border-primary bg-card p-8 shadow-elegant">
             <h3 className="text-xl font-bold text-primary-deep">{s.t}</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
           </div>
         ))}
+        </div>
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-primary py-20 text-primary-foreground">
         <div className="container-x">
