@@ -9,7 +9,7 @@ import { certs, clients, cycle, industries, mainServices, company } from "@/lib/
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
-  head: () => meta("FISAKA — EPC Company | PT Firdaus Nusantara Perkasa", "FISAKA delivers integrated engineering, procurement and construction for Indonesia’s energy and industrial sectors, with mechanical and maintenance expertise.", "/", share.url),
+  head: () => meta("FISAKA — Perusahaan EPC di Gresik, Jawa Timur | PT Firdaus Nusantara Perkasa", "FISAKA, perusahaan EPC di Gresik, Jawa Timur, delivers integrated engineering, procurement and construction for Indonesia’s energy and industrial sectors.", "/", share.url),
   component: Index,
 });
 
